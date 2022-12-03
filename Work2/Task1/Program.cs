@@ -3,26 +3,31 @@
 
 456 -> 5
 782 -> 8
-918 -> 1 */
-
+918 -> 1 
+*/
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Введите число ");
-        int number = Convert.ToInt32(Console.ReadLine());
-        int x = 0;
+        //Console.WriteLine("Введите число ");
+        //int number = Convert.ToInt32(Console.ReadLine());
 
-        if (number > 99)
+        int number = new Random().Next(1, 1200);
+        int x = 0;
+       
+        if (number >= 1000)
         {
-            if (number < 999)
-            {
-                x = number % 100 / 10;
-                Console.WriteLine(number + " ->" + x);
-            }
+            Console.WriteLine(number + " -> число четырехзначное или выше");
         }
-        else
-            Console.WriteLine("число не подходит ");
+        else if (number / 100 != 0)
+        {
+            x = number /10 % 10;
+            Console.WriteLine((number + " -> " + x));
+        }
+        else if (number < 100)
+        {
+            Console.WriteLine(number + " -> число двузначное ");
+        }  
     }
 }
