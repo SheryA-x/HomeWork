@@ -30,10 +30,5 @@ internal class Program
         {
             Console.WriteLine(number + " -> третьей цифры нет");
         }
-
-
-
-
-
     }
 }
