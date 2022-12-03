@@ -5,6 +5,7 @@
 32679 -> 6
 */
 
+
 internal class Program
 {
     private static void Main()
@@ -29,5 +30,10 @@ internal class Program
         {
             Console.WriteLine(number + " -> третьей цифры нет");
         }
+
+
+
+
+
     }
 }
