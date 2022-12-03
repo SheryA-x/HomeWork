@@ -1,33 +1,43 @@
-﻿internal class Program
+﻿/*Задача 2: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+645 -> 5
+
+78 -> третьей цифры нет
+
+32679 -> 6
+*/
+
+
+using System.ComponentModel.DataAnnotations;
+
+internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main()
     {
-        Console.WriteLine("Введите число 1");
-        int number1 = Convert.ToInt32(Console.ReadLine());
+        //Console.WriteLine("Введите число ");
+        //int number = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Введите число 2");
-        int number2 = Convert.ToInt32(Console.ReadLine());
-        int max, min, x;
+        int number = new Random().Next(1,9999);
+        int x;
 
-        if (number1 > number2)
+        if (number / 1000 != 0) 
         {
-            max = number1;
-            min = number2;
+                x = number /10 % 10;
+                Console.WriteLine(number + " -> " + x);
         }
-        else
+        else if (number / 100 != 0)
         {
-            max = number2;
-            min = number1;
+                x = number % 10;
+                Console.WriteLine((number + " -> " + x));
         }
-        //max / min
-        if (max % min == 0)
+        else 
         {
-            Console.WriteLine("кратно");
+            Console.WriteLine(number + " -> третьей цифры нет");
         }
-        else
-        {
-            x = max % min;
-            Console.WriteLine("Не кратно, остаток " + x);
-        }
+
+
+
+
+
     }
 }
