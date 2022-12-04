@@ -35,5 +35,6 @@ internal class Program
         {
             Console.WriteLine(number + " -> не кратно 7 и 23");
         }
+        */
     }
 }

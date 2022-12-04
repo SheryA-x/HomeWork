@@ -22,8 +22,13 @@ internal class Program
             {
                 number1 = number1 / 10;
             }
+            number1 = number1 % 10;
+            Console.WriteLine((number + " -> " + number1));
         }
-            
+        else
+        {
+            Console.WriteLine(number + " -> третьей цифры нет");
+        }
 
         /*
         int number = new Random().Next(1,9999);
