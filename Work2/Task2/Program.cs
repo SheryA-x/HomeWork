@@ -11,12 +11,25 @@ internal class Program
 {
     private static void Main()
     {
-        //Console.WriteLine("Введите число ");
-        //int number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите число ");
+        long number = Convert.ToInt64(Console.ReadLine());
 
+        long number1 = number;
+
+        if (number > 99)
+        {
+            while (number1 > 999)
+            {
+                number1 = number1 / 10;
+            }
+        }
+            
+
+        /*
         int number = new Random().Next(1,9999);
         int x;
 
+        
         if (number / 1000 != 0) 
         {
                 x = number /10 % 10;
@@ -31,5 +44,6 @@ internal class Program
         {
             Console.WriteLine(number + " -> третьей цифры нет");
         }
+        */
     }
 }

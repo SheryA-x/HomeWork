@@ -11,7 +11,17 @@ internal class Program
     {
         Console.WriteLine("Введите число ");
         int number = Convert.ToInt32(Console.ReadLine());
-       
+
+        if (number % 7 == 0 & number % 23 == 0)
+        {
+            Console.WriteLine(number + " -> кратно 7 и 23");
+        }
+        else
+        {
+            Console.WriteLine(number + " -> не кратно 7 и 23");
+        }
+
+        /*
         if (number % 7 == 0)
         {
             if(number % 23 == 0)
@@ -27,5 +37,6 @@ internal class Program
         {
             Console.WriteLine(number + " -> не кратно 7 и 23");
         }
+        */
     }
 }
