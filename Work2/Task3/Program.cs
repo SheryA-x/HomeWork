@@ -24,8 +24,6 @@ internal class Program
         /*
         if (number % 7 == 0)
         {
-            if(number % 23 == 0)
-            {
                 Console.WriteLine(number + " -> кратно 7 и 23");
             }
             else
@@ -37,6 +35,5 @@ internal class Program
         {
             Console.WriteLine(number + " -> не кратно 7 и 23");
         }
-        */
     }
 }
