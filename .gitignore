@@ -361,8 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/.sln
-/.csproj
+.sln
+.csproj
 
 
 /Work1/Work1.sln
