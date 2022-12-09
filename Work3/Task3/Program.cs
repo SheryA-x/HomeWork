@@ -14,7 +14,6 @@
 using Microsoft.VisualBasic;
 
 internal class Program
-
 {
     private static void Main(string[] args)
     {
@@ -32,15 +31,12 @@ internal class Program
 
         void Print_cub(int num,int[] pow)
         {
-            string comma = ",";     //запятая
-            string space = " ";     //пробел
-
             for (int i = 1; i < pow.Length; i++)
             {
                 Console.Write(num + " -> " + "[");
                 for ( i = 1; i < pow.Length-1; i++)         //  pow.Length-1 для того что бы вывелось на экран все кроме последней
                 {
-                    Console.Write(pow[i] + comma + space);  //счетчик i в двух for, для того что бы счетчик который закончил во 2м for, продолжил в 1м
+                    Console.Write(pow[i] + "," + " ");      //счетчик i в двух for, для того что бы счетчик который закончил во 2м for, продолжил в 1м
                 }
                 Console.Write(pow[i] + "]");                //  вывод последнего значения без запятой и пробела
             }
