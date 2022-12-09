@@ -2,24 +2,30 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Введите число");
-        string N = Console.ReadLine();
-        int lenght = N.Length;
+        Console.Write("Введите число: ");
+        int number = Int32.Parse(Console.ReadLine());
 
-        int first = 0;
-        int last = lenght - 1;
+        int revers_res = revers(number);
 
-        if (N[first] == N[last])
+        if (number == revers_res)
         {
-            first++;
-            last--;
-            Console.WriteLine(N + " -> Полиндром");
+            Console.WriteLine("Полиндром");
         }
         else
         {
-            Console.WriteLine(N + " -> не Полиндром");
+            Console.WriteLine("не Полиндром");
         }
-
-
+            static int revers(int x)
+        {
+            int result = 0;
+            int number = x;
+            while (number > 0)
+            {
+                result = result * 10;
+                result = result + number % 10;
+                number = number / 10;
+            }
+            return result;
+        }// математический метод на разворот числа
     }
 }
