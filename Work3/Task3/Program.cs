@@ -9,7 +9,7 @@
 */
 
 //1) 1 ^ 3 = 1 * 1 * 1;
-//2) n ^ 3 = n * n * n;
+//2) i ^ 3 = i * i * i;
 
 using Microsoft.VisualBasic;
 
@@ -17,19 +17,26 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.Write("Введите число: ");
-        int N = Convert.ToInt32(Console.ReadLine());
+        int N = Enter_Number();
 
         int[] cub = new int[N + 1];
 
         for (int i = 1; i <= N; i++)
         {
-            cub[i] =i * i * i;
+            cub[i] = Convert.ToInt32(Math.Pow(i, 3));//cub[i] = i * i * i;   //конвертация Math.Pow в целое число    
         }
-        Print_cub(N, cub);
-        
+        Print_cub(N, cub);  //Вывод на экран
 
-        void Print_cub(int num,int[] pow)
+
+////////////////////////////////
+        int Enter_Number()
+        {
+            Console.Write("Введите число: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            return x;
+        }// Метод вывод на экран сообщения о вводе числа, ввод с клавиатуры и конвертация из string в int
+
+        void Print_cub(int num,int[] pow)       // num - число с клавиатуры, pow - массив
         {
             for (int i = 1; i < pow.Length; i++)
             {
