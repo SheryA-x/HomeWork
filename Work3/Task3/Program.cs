@@ -11,8 +11,6 @@
 //1) 1 ^ 3 = 1 * 1 * 1;
 //2) i ^ 3 = i * i * i;
 
-using Microsoft.VisualBasic;
-
 internal class Program
 {
     private static void Main(string[] args)
@@ -23,7 +21,7 @@ internal class Program
 
         for (int i = 1; i <= N; i++)
         {
-            cub[i] = Convert.ToInt32(Math.Pow(i, 3));//cub[i] = i * i * i;   //конвертация Math.Pow в целое число    
+            cub[i] = Convert.ToInt32(Math.Pow(i, 3));   //cub[i] = i * i * i;   //конвертация Math.Pow в целое число    
         }
         Print_cub(N, cub);  //Вывод на экран
 

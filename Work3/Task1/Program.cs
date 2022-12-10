@@ -11,10 +11,9 @@ internal class Program
     private static void Main(string[] args)
     {
         Console.Write("Введите число: ");
-        int number = Int32.Parse(Console.ReadLine());
-        int revers_res = revers(number);
+        int number = Convert.ToInt32(Console.ReadLine());
 
-        if (number == revers_res)
+        if (number == revers(number))
         {
             Console.WriteLine("Палиндром");
         }
