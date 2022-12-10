@@ -45,28 +45,22 @@ internal class Program
             Console.WriteLine($"Введите точку A: ");
             Console.Write($"координаты x: ");
             int x = Convert.ToInt32(Console.ReadLine());
-            //int x = new Random().Next(-10, 10);
 
             Console.Write($"координаты y: ");
             int y = Convert.ToInt32(Console.ReadLine());
-            //int y = new Random().Next(-10, 10);
 
             Console.Write($"координаты z: ");
             int z = Convert.ToInt32(Console.ReadLine());
-            //int z = new Random().Next(-10, 10);
 
             Console.WriteLine($"Введите точку B: ");
             Console.Write($"координаты x1: ");
             int x1 = Convert.ToInt32(Console.ReadLine());
-            //int x1 = new Random().Next(-10, 10);
 
             Console.Write($"координаты y1: ");
             int y1 = Convert.ToInt32(Console.ReadLine());
-            //int y1 = new Random().Next(-10, 10);
 
             Console.Write($"координаты z1: ");
             int z1 = Convert.ToInt32(Console.ReadLine());
-            //int z1 = new Random().Next(-10, 10);
 
             result = Math.Sqrt( (Math.Pow((x - x1), 2))           //AB = √(x - x1)2 + (y - y1)2 + (z - z1)2;
                               + (Math.Pow((y - y1), 2))
