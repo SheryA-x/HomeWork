@@ -12,9 +12,6 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 
 //  ( Math.Pow ( (x-x1), 2 );
 
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-
 internal class Program
 {
     private static void Main(string[] args)
