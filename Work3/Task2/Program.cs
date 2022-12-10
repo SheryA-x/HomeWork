@@ -10,7 +10,7 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 
 //  AB = Math.Sqrt(Math.Pow() + Math.Pow() + Math.Pow());
 
-//  ( Math.Pow ( (x-x1), 2 );
+//  ( Math.Pow ( (x-x1), 2 ) );
 
 internal class Program
 {
