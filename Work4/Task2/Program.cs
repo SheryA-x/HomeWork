@@ -12,7 +12,11 @@ internal class Program
         Console.Write("Введите число: ");
         int number = Convert.ToInt32(Console.ReadLine());
 
-        int N = SumNum (number);
+        int x = 452;
+
+        int N = SumNum (x);
+
+        int num = number;
 
         int SumNum (int num)
         {

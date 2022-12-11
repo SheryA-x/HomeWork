@@ -23,7 +23,7 @@ internal class Program
             int sum = 1;
             for (int i = 1; i <= y; i++)
             {
-                sum = sum * x;  
+                sum *= x;  // sum = sum * x;
             }
             return sum;
         }   // Цикл для степени x - число y - степень
