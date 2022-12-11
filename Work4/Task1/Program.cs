@@ -15,7 +15,7 @@ internal class Program
         
         int result = MathPow(num, pow);
 
-        Console.WriteLine(result);
+        Console.WriteLine($"{num}, {pow} -> " + result);
         
 
         int MathPow (int x, int y)
@@ -26,7 +26,7 @@ internal class Program
                 sum = sum * x;  
             }
             return sum;
-        }   // Цикл для степени
+        }   // Цикл для степени x - число y - степень
 
         int Enter(string msg)
         {
