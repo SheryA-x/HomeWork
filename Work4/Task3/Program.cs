@@ -16,6 +16,7 @@
 // прогонять через ProductNum SumNum, затем делить и если при делени число осталось без остатка то записываем в массив
 
 using System;
+using System.Globalization;
 
 internal class Program
 {
@@ -24,21 +25,24 @@ internal class Program
         //int[] arr = {};
         //int num = 591;
         int[] arr = new int[10];
-     
-        for (int i = 0; i < 10; i++)
+        int[] arr2 = new int[10];
+        int tr = 0; //try
+
+        Console.Write("[");
+        for (int i = 0; i < 10; tr++)
         {
             int random = new Random().Next(10,1000);
 
-            if ( ProductNum(random) % SumNum(random) != 0)
+            if (ProductNum(random) % SumNum(random) == 0)
             {
-                i--;
-            }
-            else if (ProductNum(random) % SumNum(random) == 0)
-            {   
                 arr[i] = random;
-                Console.Write(arr[i] + ", ");  
+                Console.Write(arr[i] + ", ");
+                i++;
             }
         }
+        Console.WriteLine("]");
+        Console.WriteLine($"Количество попыток - {tr} ");
+
 
         int SumNum(int num)
         {
