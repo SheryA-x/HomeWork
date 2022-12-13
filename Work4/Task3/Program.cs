@@ -16,46 +16,42 @@
 // прогонять через ProductNum SumNum, затем делить и если при делени число осталось без остатка то записываем в массив
 
 using System;
+using System.ComponentModel;
 using System.Globalization;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        //int[] arr = {};
-        //int num = 591;
         int[] arr = new int[10];
-        int[] arr2 = new int[10];
+
         int tr = 0; //try
 
         Console.Write("[");
+
         for (int i = 0; i < 10; tr++)
         {
-            int random = new Random().Next(10,1000);
+            int random = GetRandom(10, 1000);
 
-            if (ProductNum(random) % SumNum(random) == 0)
+            if (GetProductNum(random) % GetSumNum(random) == 0)
             {
                 arr[i] = random;
                 Console.Write(arr[i] + ", ");
                 i++;
             }
         }
+
         Console.WriteLine("]");
         Console.WriteLine($"Количество попыток - {tr} ");
 
 
-        int SumNum(int num)
+        int GetRandom(int x, int y)
         {
-            int sum = 0;
-            while (num > 0)
-            {
-                sum = sum + num % 10;
-                num = num / 10;
-            }
-            return sum;
-        }
+            int num = new Random().Next(x, y);
+            return num;
+        }      //Метод рандома
 
-        int ProductNum(int num)
+        int GetProductNum(int num)
         {
             int sum = 1;
             while (num > 0)
@@ -68,6 +64,17 @@ internal class Program
                 num = num / 10;
             }
             return sum;
-        }
+        }       //Метод умножения
+
+        int GetSumNum(int num)
+        {
+            int sum = 0;
+            while (num > 0)
+            {
+                sum = sum + num % 10;
+                num = num / 10;
+            }
+            return sum;
+        }           //Метод сложения
     }   
 }
