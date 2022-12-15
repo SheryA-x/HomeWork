@@ -5,7 +5,6 @@
 
 [3  22 2 78] -> 76
 */
-using System;
 
 internal class Program
 {
