@@ -11,7 +11,6 @@ internal class Program
     private static void Main(string[] args)
     {
         int[] arr = new int[5];
-        int result = 0;
         int min = 100;
         int max = 0;
  
