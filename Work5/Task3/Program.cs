@@ -11,9 +11,7 @@ internal class Program
     private static void Main(string[] args)
     {
         int[] arr = new int[5];
-        int min = 100;
-        int max = 0;
- 
+
         Console.Write($"[");
 
          for (int i = 0; i < arr.Length; i++)
@@ -22,6 +20,9 @@ internal class Program
              arr[i] = num;
              Console.Write($"{num}, ");
          }
+
+        int min = arr[0];
+        int max = arr[0];
 
         for (int i = 0; i < arr.Length; i++)
         {
@@ -35,6 +36,6 @@ internal class Program
             }
         }
         Console.Write($"]");
-        Console.WriteLine($" -> {max - min}");
+        Console.WriteLine($" -> {max} {min}");
     }
 }

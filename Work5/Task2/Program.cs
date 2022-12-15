@@ -27,7 +27,7 @@ internal class Program
 
         for (int i = 1; i < arr.Length; i += 2)
         {
-            summ+= arr[i];
+            summ = summ + arr[i];
         }
         
         Console.Write($" -> {summ}");
