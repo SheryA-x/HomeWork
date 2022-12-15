@@ -389,3 +389,5 @@ FodyWeavers.xsd
 /тренировка/тренировка/тренировка.csproj
 /тренировка/тренировка/Program.cs
 /Work5/Task3/Task3.csproj
+/тренировка/Тренировка2/Program.cs
+*.csproj
