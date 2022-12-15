@@ -13,33 +13,34 @@ internal class Program
     {
         
 
-        int[] arr = new int[5];
+        
         int summ = 0;
-        int min = 0;
+        int min = 100;
         int max = 0;
  
         Console.Write($"[");
 
-        for (int i = 0; i < arr.Length; i++)
-        {
-            int num = new Random().Next(0, 100);
-            arr[i] = num;
-            Console.Write($"{num}, ");
-        }
+
+
+         int[] arr = new int[5];
+         for (int i = 0; i < arr.Length; i++)
+         {
+             int num = new Random().Next(0, 100);
+             arr[i] = num;
+             Console.Write($"{num}, ");
+         }
+
 
         for (int i = 0; i < arr.Length; i++)
         {
-            if (arr[i] < min)
-            {
-                min = arr[i];
-            }
-
             if (arr[i] > max)
             {
                 max = arr[i];
             }
-
-
+            else if (arr[i] < min)
+            {
+                min = arr[i];
+            }
         }
 
         Console.Write($"]");
