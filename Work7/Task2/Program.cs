@@ -9,39 +9,24 @@
 [1, 7]->такого числа в массиве нет
 */
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Задайте количество строк массива");
-        int m = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Задайте количество столбцов массива");
-        int n = Convert.ToInt32(Console.ReadLine());
+        int m = Enter("Задайте количество строк массива");
+        int n = Enter("Задайте количество столбцов массива");
+        int ind1 = Enter("Задайте индекс строки");
+        int ind2 = Enter("Задайте индекс стольбца");
 
-        Console.WriteLine("Укажите два индекса массива");
-        int ind1 = Convert.ToInt32(Console.ReadLine());
-        int ind2 = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine();
 
         int[,] arr = new int[m, n];
         Random rnd = new Random();
 
-        int numberRequested = 0;
-
-        for (int i = 0; i < m; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                arr[i, j] = rnd.Next(1, 10);
-                Console.Write($"{arr[i, j]} ");
-
-                if (j == n - 1)
-                {
-                    Console.WriteLine();
-                }
-            }
-        }
+        Getarray(n, m);
+        Console.WriteLine();
 
         if (n <= ind1 & m <= ind2)
         {
@@ -49,8 +34,30 @@ internal class Program
         }
         else
         {
-            numberRequested = arr[ind1, ind2];
-            Console.WriteLine($"число в массиве [{ind1},{ind2}] -> {numberRequested}");
+            Console.WriteLine($"число в массиве под индексами [{ind1},{ind2}] -> {arr[ind1, ind2]}");
         }
+
+        void Getarray(int x, int y)
+        {
+            for (int i = 0; i < x; i++)
+            {
+                for (int j = 0; j < y; j++)
+                {
+                    arr[i, j] = rnd.Next(10);
+                    Console.Write($"{arr[i, j]} ");
+
+                    if (j == y - 1)
+                    {
+                        Console.WriteLine();
+                    }
+                }
+            }
+        } // вывод аккуратного массива от 1-9
+        int Enter (string msg)
+        {
+            Console.WriteLine(msg);
+            int x = Convert.ToInt32(Console.ReadLine());
+            return x;
+        }   // ввод чисел
     }
 }
