@@ -393,3 +393,4 @@ FodyWeavers.xsd
 *.csproj
 /Worrk6/Worrk6.sln
 /тренировка/Тренировка3/Program.cs
+*.sln
