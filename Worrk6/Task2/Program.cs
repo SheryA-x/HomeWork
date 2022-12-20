@@ -22,5 +22,4 @@ double k2 = Convert.ToInt32(Console.ReadLine());
 double x = -(b1 - b2) / (k1 - k2);
 double y = k1 * x + b1;
 
-
 Console.WriteLine($"b1 = {b1}, b1 = {k1}, b1 = {b2}, b1 = {k2} -> ({x}; {y})");

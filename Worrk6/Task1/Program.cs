@@ -25,8 +25,6 @@ internal class Program
             {
                 count++;
             }
-            //continue;
-              
         }
         
         Console.Write($" -> {count}");
