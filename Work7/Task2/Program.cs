@@ -8,8 +8,6 @@
 8 4 2 4
 [1, 7]->такого числа в массиве нет
 */
-using System.Globalization;
-using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
@@ -19,7 +17,6 @@ internal class Program
         int n = Enter("Задайте количество столбцов массива");
         int ind1 = Enter("Задайте индекс строки");
         int ind2 = Enter("Задайте индекс стольбца");
-
         Console.WriteLine();
 
         int[,] arr = new int[m, n];
