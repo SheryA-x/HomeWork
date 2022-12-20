@@ -22,7 +22,7 @@ internal class Program
         int[,] arr = new int[m, n];
         Random rnd = new Random();
 
-        Getarray(n, m);
+        FillArray(n, m);
         Console.WriteLine();
 
         if (n <= ind1 & m <= ind2)
@@ -34,7 +34,7 @@ internal class Program
             Console.WriteLine($"число в массиве под индексами [{ind1},{ind2}] -> {arr[ind1, ind2]}");
         }
 
-        void Getarray(int x, int y)
+        void FillArray(int x, int y)
         {
             for (int i = 0; i < x; i++)
             {
