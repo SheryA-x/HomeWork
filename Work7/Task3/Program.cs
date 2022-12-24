@@ -39,6 +39,7 @@ internal class Program
         GetFillArrayRandom(line, column, min, max);
         Console.WriteLine();
 
+        Console.Write($"=> [");
         for (int i = 0; i < column;i++)
         {
             for (int j = 0; j < line; j++)
@@ -51,21 +52,22 @@ internal class Program
                     Count++;
                 }
             }
+
             if (summ == 0)
             {
-                Console.Write($" 0 ");
+                Console.Write($" 0, ");
             }
             else
             {
                 result = Math.Round(summ / Count, 1);
-                Console.Write($" {result} ");
+                Console.Write($" {result}, ");
                 Count = 0;
                 summ = 0;
             }
         }
-
+        Console.Write("]");
         /////////////////////////////
-        
+
         int revers(int x) // метод
         {
             int result = 0;
