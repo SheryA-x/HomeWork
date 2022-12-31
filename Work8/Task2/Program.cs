@@ -24,7 +24,7 @@ internal class Program
         int minRange = 1;// Enter("Задайте минимальный диапазон значений");
         int maxRange = 16;// Enter("Задайте максимальный диапазон значений");
 
-        int minimum = column * maxRange; // что бы не ставить конкретное(волшебное) число, мы поставим максимальное какое может быть
+        int minimum = column * maxRange; // что бы не ставить конкретное(волшебное) число в строке, мы поставим максимальное какое может быть
 
         int[] summArr = new int[line];
         
@@ -118,6 +118,6 @@ internal class Program
                 }
             }
             return count;
-        }
+        }   // поиск строки
     }
 }
