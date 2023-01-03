@@ -18,11 +18,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int line = Enter("Задайте количество строк массива");
-        int column = Enter("Задайте количество столбцов массива");
+        int line = 5;// Enter("Задайте количество строк массива");
+        int column = 5;// Enter("Задайте количество столбцов массива");
 
-        int minRange = Enter("Задайте минимальный диапазон значений");
-        int maxRange = Enter("Задайте максимальный диапазон значений");
+        int minRange = 1;// Enter("Задайте минимальный диапазон значений");
+        int maxRange = 10;// Enter("Задайте максимальный диапазон значений");
 
         int[,] arr = new int[line, column];
         GetFillArrayRandom(arr, minRange, maxRange);
