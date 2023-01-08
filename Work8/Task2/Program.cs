@@ -78,16 +78,13 @@ internal class Program
 
         void summLine(int[,] arr, int[] arr2)
         {
-            int summ = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    summ += arr[i, j];
+                    summArr[i] += arr[i, j];
                 }
-                //Console.WriteLine(summ);
-                summArr[i] = summ;
-                summ = 0;
+
                 Console.WriteLine(summArr[i]);
             }
         }//  подсчет строк двумерного массива и запись в одномерный
@@ -103,7 +100,7 @@ internal class Program
                 
             }   // Поиск наименьшего числа
 
-            Console.WriteLine($"{minimum}");
+            Console.WriteLine($"минимальная сумма {minimum}");
         }   //  Поиск наименьшего числа в одномерном массиве
 
         int minSummLineArr(int[] arr)

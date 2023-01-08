@@ -39,7 +39,7 @@ internal class Program
         matrixMultiplication(arr, arr2);
         Console.WriteLine();
 
-        enterArray2D(result);
+        outputArray2D(result);
         
         
 
@@ -75,7 +75,7 @@ internal class Program
 
         }// Заполнение массива рандомными значениями
 
-        void enterArray2D(int[,] arr)
+        void outputArray2D(int[,] arr)
         {
             for (int i = 0; i < arr.GetLength(0); i++)
             {
